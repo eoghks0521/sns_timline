@@ -6,7 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.hackday.timeline.member.domain.Member;
 import com.hackday.timeline.subscription.domain.Subscription;
 import com.hackday.timeline.subscription.dto.SubsDTO;
 
@@ -27,7 +26,5 @@ public interface SubsRepository extends JpaRepository<Subscription, Long> {
 		+ "WHERE c.userNo = ?1 "
 		+ "ORDER BY a.regDate DESC")
 	public List<SubsDTO> subsMemberList(Long userNo) throws Exception;
-
-	public void deleteByMember(Member member) throws Exception;
 
 }

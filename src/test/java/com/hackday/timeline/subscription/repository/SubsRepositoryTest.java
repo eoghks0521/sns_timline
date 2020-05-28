@@ -24,11 +24,11 @@ class SubsRepositoryTest {
 	@Test
 	public void member_save_test() {
 		Subscription subs = new Subscription();
-		Member member1 = new Member();
-		member1.setUserNo(1L);
+		Member member = new Member();
+		member.setUserNo(1L);
+		subs.setMember(member);
 		Member member2 = new Member();
-		member2.setUserNo(2L);
-		subs.setMember(member1);
+		member.setUserNo(2L);
 		subs.setSubsMember(member2);
 		Subscription saveSubs = subsRepository.save(subs);
 		assertEquals(saveSubs.getSubsNo(), is(notNullValue()));

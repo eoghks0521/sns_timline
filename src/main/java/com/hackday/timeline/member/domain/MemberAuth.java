@@ -24,6 +24,8 @@ import lombok.ToString;
 @Table(name = "member_auth")
 public class MemberAuth implements Serializable {
 
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long userAuthNo;

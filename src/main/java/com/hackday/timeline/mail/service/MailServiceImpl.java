@@ -63,7 +63,7 @@ public class MailServiceImpl implements MailService {
 
 		String htmlStr = "<h2>안녕하세요!</h2><br><br>"
 			+ "<h3>" + userId + "님</h3>" + "<p>인증하기 버튼을 누르시면 로그인을 하실 수 있습니다 : "
-			+ "<a href='http://27.96.134.60:8080" + "/mail/update?key=" + userId
+			+ "<a href='http://localhost:8080" + "/mail/update?key=" + userId
 			+ "&keyValue=" + key + "'>인증하기</a></p>";
 		mail.setTo(userId);
 

@@ -1,7 +1,7 @@
 spring:
   profiles:
-    active: prod
-    #active: daehwan-local
+    #active: prod
+    active: daehwan-local
 
   mvc:
     view:
@@ -42,7 +42,7 @@ spring:
     type: redis
 
   redis:
-    host: 27.96.134.60
+    host: localhost
     port: 6379
     password: timeline123
 
@@ -85,7 +85,7 @@ spring:
 
   master:
     datasource:
-      jdbcUrl: jdbc:mysql://27.96.134.60:3306/sns_timeline?useUnicode=yes&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Seoul
+      jdbcUrl: 
       username: timeline
       password: timeline123
       driver-class-name: com.mysql.cj.jdbc.Driver
@@ -93,7 +93,7 @@ spring:
 
   slave:
     datasource:
-      jdbcUrl: jdbc:mysql://27.96.134.60:3389/sns_timeline?useUnicode=yes&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Seoul
+      jdbcUrl:
       username: root
       password: timeline123
       driver-class-name: com.mysql.cj.jdbc.Driver
